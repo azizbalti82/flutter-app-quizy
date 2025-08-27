@@ -1,0 +1,56 @@
+name: quizy
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  hugeicons_pro: ^0.0.2
+  blur: ^4.0.2
+  get: ^4.7.2
+  shared_preferences: ^2.5.3
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  image_path: "assets/logo/logo.png"
+  min_sdk_android: 21
+  adaptive_icon_foreground: "assets/logo/logo.png"  # Path to foreground image
+  adaptive_icon_background: "#FFFFFF"
+  web:
+    generate: true
+    image_path: "assets/logo/logo.png"
+    background_color: "#FFFFFF"  # White background
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/logo/logo.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/logo/logo.png"
+  android:
+    generate: true
+    image_path: "assets/logo/logo.png"
+    color: "#FFFFFF"
+    background_color: "#FFFFFF"  # White background
+    icon_size: 144  # Adjust this for Android icons
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/logo/
