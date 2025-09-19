@@ -18,5 +18,4 @@ class Provider extends GetxController {
   void updateRecent(List<String> value) {
     recent.value = value;
   }
-
 }

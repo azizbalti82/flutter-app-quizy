@@ -1,11 +1,8 @@
-import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
-import 'package:quizy/data/models.dart';
-import 'package:quizy/services/colors.dart';
-import 'dart:math';
+import 'package:quizy/services/themeService.dart';
 
-import '../../data/quizes.dart';
-import '../../main.dart';
+import '../../../data/quizes.dart';
+import '../../../main.dart';
 import '../../widgets.dart';
 
 class AllQuizzesScreen extends StatelessWidget {

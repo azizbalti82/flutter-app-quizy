@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:hugeicons_pro/hugeicons.dart';
-import 'package:quizy/screen/quizResult.dart';
-import 'package:quizy/services/colors.dart';
+import 'package:quizy/widgets/screen/quizResultScreen.dart';
 
-import '../data/models.dart';
-import '../main.dart';
+import '../../data/models.dart';
+import '../../main.dart';
+import '../../services/themeService.dart';
 import '../widgets.dart';
 
 class QuizScreen extends StatefulWidget {

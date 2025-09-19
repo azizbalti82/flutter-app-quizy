@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:hugeicons_pro/hugeicons.dart';
-import 'package:quizy/screen/quiz.dart';
-import 'package:quizy/services/colors.dart';
-import 'package:quizy/services/sharedPreferences.dart';
+import 'package:quizy/services/themeService.dart';
+import 'package:quizy/services/sharedPreferencesService.dart';
+import 'package:quizy/widgets/screen/quizScreen.dart';
 
-import '../data/models.dart';
-import '../main.dart';
-import '../provider/provider.dart';
+import '../../data/models.dart';
+import '../../main.dart';
+import '../../services/providerService.dart';
 import '../widgets.dart';
 
 class QuizResultScreen extends StatefulWidget {

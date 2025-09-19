@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'models.dart';
 
-final quizCategories = [
+final quizCategories = [ 
   QuizCategory(
     name: "Science",
     icon: Icons.science,
@@ -363,3 +362,30 @@ final quizCategories = [
     ],
   ),
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

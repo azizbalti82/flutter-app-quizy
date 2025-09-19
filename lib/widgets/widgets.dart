@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:hugeicons_pro/hugeicons.dart';
-import 'package:quizy/provider/provider.dart';
-import 'package:quizy/screen/quiz.dart';
+import 'package:quizy/services/providerService.dart';
+import 'package:quizy/widgets/screen/quizScreen.dart';
 
-import 'data/models.dart';
+import '../data/models.dart';
 
 Widget simpleAppBar(BuildContext context, {required String text,Widget? child}) {
   final colorScheme = Theme.of(context).colorScheme;
@@ -96,4 +97,26 @@ Widget categoryCard({
         )
     ),
   );
+}
+
+class SystemUiStyleWrapper extends StatelessWidget {
+  final Widget child;
+
+  const SystemUiStyleWrapper({
+    super.key,
+    required this.child,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.white, // Status bar background
+        statusBarIconBrightness: Brightness.dark, // Status bar icons
+        systemNavigationBarColor: Colors.white, // Navigation bar background
+        systemNavigationBarIconBrightness: Brightness.dark, // Navigation bar icons
+      ),
+      child: child,
+    );
+  }
 }

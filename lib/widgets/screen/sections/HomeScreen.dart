@@ -1,14 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:quizy/data/models.dart';
-import 'package:quizy/screen/quiz.dart';
-import 'package:quizy/services/colors.dart';
 import 'dart:math';
 
-import '../../data/quizes.dart';
-import '../../provider/provider.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:quizy/data/models.dart';
+import 'package:quizy/services/themeService.dart';
+
+import '../../../data/quizes.dart';
+import '../../../services/providerService.dart';
 import '../../widgets.dart';
+import '../quizScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

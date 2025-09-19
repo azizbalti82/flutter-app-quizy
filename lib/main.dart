@@ -4,11 +4,12 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:hugeicons_pro/hugeicons.dart';
-import 'package:quizy/provider/provider.dart';
-import 'package:quizy/screen/sections/AllQuizzesScreen.dart';
-import 'package:quizy/screen/sections/HomeScreen.dart';
-import 'package:quizy/services/colors.dart';
-import 'package:quizy/services/sharedPreferences.dart';
+import 'package:quizy/services/providerService.dart';
+import 'package:quizy/services/themeService.dart';
+import 'package:quizy/services/sharedPreferencesService.dart';
+import 'package:quizy/widgets/screen/sections/AllQuizzesScreen.dart';
+import 'package:quizy/widgets/screen/sections/HomeScreen.dart';
+import 'package:quizy/widgets/widgets.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,7 +44,6 @@ class MainScreen extends StatefulWidget {
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
-
 class _MainScreenState extends State<MainScreen> {
   final Provider provider = Get.find<Provider>();
   final List<Widget> _screens = [
@@ -117,26 +117,4 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
-
-class SystemUiStyleWrapper extends StatelessWidget {
-  final Widget child;
-
-  const SystemUiStyleWrapper({
-    super.key,
-    required this.child,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: const SystemUiOverlayStyle(
-        statusBarColor: Colors.white, // Status bar background
-        statusBarIconBrightness: Brightness.dark, // Status bar icons
-        systemNavigationBarColor: Colors.white, // Navigation bar background
-        systemNavigationBarIconBrightness: Brightness.dark, // Navigation bar icons
-      ),
-      child: child,
-    );
-  }
-}
 
